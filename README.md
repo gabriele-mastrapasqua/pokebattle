@@ -8,7 +8,7 @@ Written in py3 using poetry for package management, pytest for tests and docker 
 
 ## TODO
 - add a new battle strategy to use moves and power level to calculate hp loss / stats decrease / increase based on the type of move
-- calculate hp loss using a simplified function like: ( (2 * poke level / 5) * power * Attack [poke1] / Defense [poke2] )  / 50 + 2 * modifier [type / special attack]
+- calculate hp loss using a simplified function like: ( (2 * poke level / 5) * power * Attack [poke1] / Defense [poke2] )  / 50 + 2 * modifier [type / special attack] - See this paper: https://web.stanford.edu/class/aa228/reports/2018/final151.pdf
 - the correct battle function should also use % probability of the move!
 - add more unit tests for the single components
 - use a TUI like Textual lib to better handle the CLI ui! 
