@@ -29,21 +29,24 @@ class PokemonBattleCLI:
         click.echo("\n1.Select Pokemons to battle!")
         click.echo("2. View Battle History")
 
-    def select_pokemon(self, skip_first = False):
+    def select_pokemon(self):
         click.echo("\nPlease select the Pokemons to start the battle!")
 
         # Select Pokemon 1
-        if not skip_first:
+        def select_pokemon_1():
             pokemon1_name = click.prompt("Enter Pokemon 1 name (default: bulbasaur)", default="bulbasaur")
             self.pokemon1 = pokeService.fetch_poke_info(pokemon1_name)
             if self.pokemon1 == None:
-                return self.select_pokemon()
+                return select_pokemon_1()
+        select_pokemon_1()
 
         # Select Pokemon 2
-        pokemon2_name = click.prompt("Enter Pokemon 2 name (default: charmander)", default="charmander")
-        self.pokemon2 = pokeService.fetch_poke_info(pokemon2_name)
-        if self.pokemon2 == None:
-            return self.select_pokemon(True)
+        def select_pokemon_2():
+            pokemon2_name = click.prompt("Enter Pokemon 2 name (default: charmander)", default="charmander")
+            self.pokemon2 = pokeService.fetch_poke_info(pokemon2_name)
+            if self.pokemon2 == None:
+                return select_pokemon_2()
+        select_pokemon_2()
 
         # Validate Pokemon names
         while not self.validate_pokemon_names():
