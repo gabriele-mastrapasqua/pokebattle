@@ -1,0 +1,56 @@
+*.db
+redis_data/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# C extensions
+*.so
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
+# Virtual environment
+venv/
+.env/
+
+# IDE-specific files
+.idea/
+.vscode/
+
+# Environment configuration
+.env
+
+# Compiled Python files
+*.pyc
+
+# Compiled C extension
+*.pyd
+
+# Compiled Cython files
+*.pyo
+
+# Test files
+*.pytest_cache/
+
+# Python coverage files
+.coverage
+
+# Jupyter Notebook temporary files
+.ipynb_checkpoints/
+
+# Logs
+*.log
+
+# Pipenv
+Pipfile
+Pipfile.lock
+
+# Poetry
+poetry.lock
+__pypackages__/
