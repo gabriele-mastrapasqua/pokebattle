@@ -13,6 +13,7 @@ Written in py3 using poetry for package management, pytest for tests and docker 
 - add more unit tests for the single components
 - use a TUI like Textual lib to better handle the CLI ui! 
 - show the pokemon image in battle and in ID card info.
+- add a GH workflow to build and test automatically
 
 ## Development
 
